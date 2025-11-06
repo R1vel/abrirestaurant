@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.abrirestaurant.com	TRUE	/	FALSE	1999999999	b1a2b934074b5e87d139ee0741c19702	kmm8kfbq5d75nlnnv5419kkbpj
+www.abrirestaurant.com	TRUE	/	FALSE	1999999999	nrid	1a6b8460d8cad980
+
