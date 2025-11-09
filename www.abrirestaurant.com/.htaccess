@@ -1,0 +1,14 @@
+# Redirection pour les ressources partagées
+RewriteEngine On
+
+# Ressources communes
+RewriteRule ^(templates|media|modules|plugins|components|images|assets)/(.*)$ /$1/$2 [L]
+
+# Redirection vers la version française
+RewriteCond %{REQUEST_URI} !^/fr/
+RewriteCond %{REQUEST_URI} !^/(templates|media|modules|plugins|components|images|assets)/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /fr/$1 [L]
+
+# Conservation du slash final pour les dossiers
+DirectorySlash On
