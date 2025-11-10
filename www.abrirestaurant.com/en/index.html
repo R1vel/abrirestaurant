@@ -5,22 +5,18 @@ class='com_content view-category layout-theme3666category itemid-101 home j39 mm
 
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <base  />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="Abri, Chambéry and Grenoble, fast food specializing in pitas and bowls. Whether takeaway or dine-in, everything is homemade. Don't hesitate to order via click and collect!" />
-	<meta name="generator" content="Joomla! - Open Source Content Management" />
 	<title>Abri - Your restaurants in Chambéry and Grenoble</title>
 	<link href="index.rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
 	<link href="index.atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
 	<link href="../templates/theme3666/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
 	<link href="../templates/theme3666/css/bootstrap.css" rel="stylesheet" type="text/css" />
 	<link href="../media/com_rstbox/css/engageboxacee.css?v=3.3.1" rel="stylesheet" type="text/css" />
-	<link href="../media/jui/css/chosend4cc.css?676ad7366de00f340f7d4bc5310d4386" rel="stylesheet" type="text/css" />
 	<link href="../templates/theme3666/css/template.css" rel="stylesheet" type="text/css" />
 	<link href="../templates/system/css/system.css" rel="stylesheet" type="text/css" />
 	<link href="../templates/theme3666/css/megamenu.css" rel="stylesheet" type="text/css" />
-	<link href="../plugins/system/t3/base-bs3/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="../templates/theme3666/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<link href="../templates/theme3666/fonts/material-design/css/material-design.css" rel="stylesheet" type="text/css" />
 	<link href="../templates/theme3666/fonts/material-icons/css/material-icons.css" rel="stylesheet" type="text/css" />
@@ -47,13 +43,10 @@ class='com_content view-category layout-theme3666category itemid-101 home j39 mm
 
 	</style>
 	<script src="../media/jui/js/jquery.mind4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>
-	<script src="../media/jui/js/jquery-noconflictd4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>
-	<script src="../media/jui/js/jquery-migrate.mind4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>
 	<script src="../media/com_rstbox/js/velocityacee.js?v=3.3.1" type="text/javascript"></script>
 	<script src="../media/com_rstbox/js/velocity.uiacee.js?v=3.3.1" type="text/javascript"></script>
 	<script src="../media/com_rstbox/js/engageboxacee.js?v=3.3.1" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/bootstrap/js/bootstrapd4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>
-	<script src="../media/jui/js/chosen.jquery.mind4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>
 	<script src="../templates/theme3666/js/script.js" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/js/jquery.tap.min.js" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/js/script.js" type="text/javascript"></script>
@@ -64,220 +57,207 @@ class='com_content view-category layout-theme3666category itemid-101 home j39 mm
 	<script src="../modules/mod_djimageslider/assets/js/sliderec92.js?v=" type="text/javascript" defer="defer"></script>
 	<script src="../modules/mod_swiper/js/swiper.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
-jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
-	jQuery(function ($) {
-		initChosen();
-		$("body").on("subform-row-add", initChosen);
+	var path = "templates/theme3666/js/index.html";
 
-		function initChosen(event, container)
-		{
-			container = container || document;
-			$(container).find("select").chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Saisir ou choisir des options","placeholder_text_single":"S\u00e9lectionnez une option","no_results_text":"Aucun r\u00e9sultat correspondant"});
-		}
-	});
-	
-var path = "templates/theme3666/js/index.html";
+	;(function($){
+		$(window).load(function() {
+				$(document).on("click touchmove",function(e) {
+						var container = $("#t3-mainnav .t3-navbar-collapse");
+						if (!container.is(e.target)
+								&& container.has(e.target).length === 0 && container.hasClass("in"))
+						{
+								$("#t3-mainnav .t3-navbar-collapse").toggleClass("in")
+						}
+				})
+				// check we miss any nav
+				if($(window).width() < 768){
+						$('.t3-navbar-collapse ul.nav').has('.dropdown-menu').t3menu({
+								duration : 100,
+								timeout : 50,
+								hidedelay : 100,
+								hover : false,
+								sb_width : 20
+						});
+				}
+		});
+	})(jQuery);
 
-;(function($){
-	$(window).load(function() {
-		$(document).on("click touchmove",function(e) {
-			
-	          var container = $("#t3-mainnav .t3-navbar-collapse");
-	          if (!container.is(e.target)
-	              && container.has(e.target).length === 0 && container.hasClass("in"))
-	          {
-	              $("#t3-mainnav .t3-navbar-collapse").toggleClass("in")
-	          }
-	      })
-		// check we miss any nav
-		if($(window).width() < 768){
-			$('.t3-navbar-collapse ul.nav').has('.dropdown-menu').t3menu({
-				duration : 100,
-				timeout : 50,
-				hidedelay : 100,
-				hover : false,
-				sb_width : 20
-			});
-		}
-	});
-})(jQuery);
-
-	
-		tarteaucitron.user.addthisPubId = "ra-5c2f6c448f03098b";
-        (tarteaucitron.job = tarteaucitron.job || []).push("addthis");
+    
+					tarteaucitron.user.addthisPubId = "ra-5c2f6c448f03098b";
+					(tarteaucitron.job = tarteaucitron.job || []).push("addthis");
        
-	(tarteaucitron.job = tarteaucitron.job || []).push("recaptcha");
-	
-		tarteaucitron.init({
-            "hashtag": "#cookies", /* Ouverture automatique du panel avec le hashtag */
-            "AcceptAllCta" : true,
-            "highPrivacy": true, /* désactiver le consentement implicite (en naviguant) ? */
-            "orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
-            "adblocker": false, /* Afficher un message si un adblocker est détecté */
-            "showAlertSmall": true, /* afficher le petit bandeau en bas à droite ? */
-            "cookieslist": true, /* Afficher la liste des cookies installés ? */
-            "removeCredit": true, /* supprimer le lien vers la source ? */
-            "customLang": false, /* supprimer le lien vers la source ? */
-            "expiration": 31536000000
-        }); 
+			(tarteaucitron.job = tarteaucitron.job || []).push("recaptcha");
+    
+					tarteaucitron.init({
+							"hashtag": "#cookies", /* Ouverture automatique du panel avec le hashtag */
+							"AcceptAllCta" : true,
+							"highPrivacy": true, /* désactiver le consentement implicite (en naviguant) ? */
+							"orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+							"adblocker": false, /* Afficher un message si un adblocker est détecté */
+							"showAlertSmall": true, /* afficher le petit bandeau en bas à droite ? */
+							"cookieslist": true, /* Afficher la liste des cookies installés ? */
+							"removeCredit": true, /* supprimer le lien vers la source ? */
+							"customLang": false, /* supprimer le lien vers la source ? */
+							"expiration": 31536000000
+					}); 
 
 	;(function ($, undefined) {
-		$(window).load(function(){
-			function isIE() {
-			    var myNav = navigator.userAgent.toLowerCase();
-			    return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
-			};
-			var o = $("#swiper-slider_208");
+			$(window).load(function(){
+					function isIE() {
+							var myNav = navigator.userAgent.toLowerCase();
+							return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+					};
+					var o = $("#swiper-slider_208");
 
-		    if (o.length) {
+					if (o.length) {
 
-		        function getSwiperHeight(object, attr) {
-			      var val = object.attr("data-" + attr),dim;
-			      if (!val) {
-			        return undefined;
-			      }
-			      dim = val.match(/(px)|(%)|(vh)|(vw)$/i);
-			      if (dim.length) {
-			        switch (dim[0]) {
-			          case "px":
-			            return parseFloat(val);
-			          case "vh":
-			            return $window.height() * (parseFloat(val) / 100);
-			          case "vw":
-			            return $window.width() * (parseFloat(val) / 100);
-			          case "%":
-			            return object.width() * (parseFloat(val) / 100);
-			        }
-			      } else {
-			        return undefined;
-			      }
-			    }
+							function getSwiperHeight(object, attr) {
+								var val = object.attr("data-" + attr),dim;
+								if (!val) {
+									return undefined;
+								}
+								dim = val.match(/(px)|(%)|(vh)|(vw)$/i);
+								if (dim.length) {
+									switch (dim[0]) {
+										case "px":
+											return parseFloat(val);
+										case "vh":
+											return $window.height() * (parseFloat(val) / 100);
+										case "vw":
+											return $window.width() * (parseFloat(val) / 100);
+										case "%":
+											return object.width() * (parseFloat(val) / 100);
+									}
+								} else {
+									return undefined;
+								}
+							}
 
-		        function toggleSwiperInnerVideos(swiper) {
-			        var prevSlide = $(swiper.slides[swiper.previousIndex]),
-			        nextSlide = $(swiper.slides[swiper.activeIndex]),
-			        videos,
-			        videoItems = prevSlide.find("video");
+							function toggleSwiperInnerVideos(swiper) {
+									var prevSlide = $(swiper.slides[swiper.previousIndex]),
+									nextSlide = $(swiper.slides[swiper.activeIndex]),
+									videos,
+									videoItems = prevSlide.find("video");
 
-			        for (var i = 0; i < videoItems.length; i++) {
-			        	videoItems[i].pause();
-			        }
+									for (var i = 0; i < videoItems.length; i++) {
+											videoItems[i].pause();
+									}
 
-			      	videos = nextSlide.find("video");
-			        if (videos.length) {
-			        	videos.get(0).play();
-			        }
-			    }
+									videos = nextSlide.find("video");
+									if (videos.length) {
+											videos.get(0).play();
+									}
+							}
 
-		        function toggleSwiperCaptionAnimation(swiper) {
-			        var prevSlides = $(swiper.el).find("[data-caption-animate]"),
-			        nextSlide = $(swiper.slides[swiper.activeIndex]).find("[data-caption-animate]"),
-			        delay,
-			        duration,
-			        nextSlideItem,
-			        prevSlideItem;
+							function toggleSwiperCaptionAnimation(swiper) {
+									var prevSlides = $(swiper.el).find("[data-caption-animate]"),
+									nextSlide = $(swiper.slides[swiper.activeIndex]).find("[data-caption-animate]"),
+									delay,
+									duration,
+									nextSlideItem,
+									prevSlideItem;
 
-			        for (var i = 0; i < prevSlides.length; i++) {
-				        prevSlideItem = $(prevSlides[i]);
+									for (var i = 0; i < prevSlides.length; i++) {
+											prevSlideItem = $(prevSlides[i]);
 
-				        prevSlideItem.removeClass("animated")
-				          .removeClass(prevSlideItem.attr("data-caption-animate"))
-				          .addClass("not-animated");
-			        }
-
-
-			        var tempFunction = function (nextSlideItem, duration) {
-				        return function () {
-				          nextSlideItem
-				            .removeClass("not-animated")
-				            .addClass(nextSlideItem.attr("data-caption-animate"))
-				            .addClass("animated");
-				          if (duration) {
-				            nextSlideItem.css('animation-duration', duration + 'ms');
-				          }
-				        };
-			        };
-
-			        for (var i = 0; i < nextSlide.length; i++) {
-				        nextSlideItem = $(nextSlide[i]);
-				        delay = nextSlideItem.attr("data-caption-delay");
-				        duration = nextSlideItem.attr('data-caption-duration');
-				        
-			            if (delay) {
-			            	setTimeout(tempFunction(nextSlideItem, duration), parseInt(delay, 10));
-			            } else { 
-			            	setTimeout(tempFunction(nextSlideItem, duration), parseInt(delay, 0));
-			            }
-			        }
-			    }
-
-                var s = $("#swiper-slider_208"),
-	            pag = s.find(".swiper-pagination"),
-	            next = s.find(".swiper-button-next"),
-	            prev = s.find(".swiper-button-prev"),
-	            bar = s.find(".swiper-scrollbar"),
-	            swiperSlide = s.find(".swiper-slide");
-
-		        for (var j = 0; j < swiperSlide.length; j++) {
-		          var $this = $(swiperSlide[j]),
-		            url;
-
-		          if (url = $this.attr("data-slide-bg")) {
-		            $this.css({
-		              "background-image": "url(" + url + ")",
-		              "background-size": "cover"
-		            })
-		          }
-		        }
-
-		        swiperSlide.end()
-		          .find("[data-caption-animate]")
-		          .addClass("not-animated")
-		          .end();
-		        
-		        var swiperOptions = {
-		        	
-		          direction: s.attr('data-direction') ? s.attr('data-direction') : "horizontal",
-		          effect: s.attr('data-slide-effect') ? s.attr('data-slide-effect') : "slide",
-		          speed: s.attr('data-slide-speed') ? s.attr('data-slide-speed') : 600,
-		          loop: s.attr('data-loop'),
-		          simulateTouch: s.attr('data-simulate-touch') ? s.attr('data-simulate-touch') : false,
-		          navigation: {
-		            nextEl: next.length ? next.get(0) : null,
-		            prevEl: prev.length ? prev.get(0) : null
-		          },
-		          pagination: {
-		            el: pag.length ? pag.get(0) : null,
-		            clickable: pag.length ? pag.attr("data-clickable") !== "false" : false,
-		            renderBullet: pag.length ? pag.attr("data-index-bullet") === "true" ? function (index, className) {
-		              return '<span class="' + className + '">' + ((index + 1) < 10 ? ('0' + (index + 1)) : (index + 1)) + '</span>';
-		            } : null : null,
-		          },
-		          scrollbar: {
-		            el: bar.length ? bar.get(0) : null,
-		            draggable: bar.length ? bar.attr("data-draggable") !== "false" : true,
-		            hide: bar.length ? bar.attr("data-draggable") === "false" : false
-		          },
-		          on: {
-		            init: function () {
-		              toggleSwiperInnerVideos(this);
-		              toggleSwiperCaptionAnimation(this);
-		            },
-
-		            transitionStart: function () {
-		              toggleSwiperInnerVideos(this);
-		            },
-		            transitionEnd: function () {
-		            	toggleSwiperCaptionAnimation(this)
-		            }
-		          }
-		        };
-		        
-		        mainSlider = new Swiper($("#swiper-slider_208"), swiperOptions);
-		    }
+											prevSlideItem.removeClass("animated")
+												.removeClass(prevSlideItem.attr("data-caption-animate"))
+												.addClass("not-animated");
+									}
 
 
-		});
+									var tempFunction = function (nextSlideItem, duration) {
+											return function () {
+												nextSlideItem
+													.removeClass("not-animated")
+													.addClass(nextSlideItem.attr("data-caption-animate"))
+													.addClass("animated");
+												if (duration) {
+													nextSlideItem.css('animation-duration', duration + 'ms');
+												}
+											};
+									};
+
+									for (var i = 0; i < nextSlide.length; i++) {
+											nextSlideItem = $(nextSlide[i]);
+											delay = nextSlideItem.attr("data-caption-delay");
+											duration = nextSlideItem.attr('data-caption-duration');
+                    
+											if (delay) {
+													setTimeout(tempFunction(nextSlideItem, duration), parseInt(delay, 10));
+											} else { 
+													setTimeout(tempFunction(nextSlideItem, duration), parseInt(delay, 0));
+											}
+									}
+							}
+
+							var s = $("#swiper-slider_208"),
+							pag = s.find(".swiper-pagination"),
+							next = s.find(".swiper-button-next"),
+							prev = s.find(".swiper-button-prev"),
+							bar = s.find(".swiper-scrollbar"),
+							swiperSlide = s.find(".swiper-slide");
+
+							for (var j = 0; j < swiperSlide.length; j++) {
+								var $this = $(swiperSlide[j]),
+									url;
+
+								if (url = $this.attr("data-slide-bg")) {
+									$this.css({
+										"background-image": "url(" + url + ")",
+										"background-size": "cover"
+									})
+								}
+							}
+
+							swiperSlide.end()
+								.find("[data-caption-animate]")
+								.addClass("not-animated")
+								.end();
+            
+							var swiperOptions = {
+                
+								direction: s.attr('data-direction') ? s.attr('data-direction') : "horizontal",
+								effect: s.attr('data-slide-effect') ? s.attr('data-slide-effect') : "slide",
+								speed: s.attr('data-slide-speed') ? s.attr('data-slide-speed') : 600,
+								loop: s.attr('data-loop'),
+								simulateTouch: s.attr('data-simulate-touch') ? s.attr('data-simulate-touch') : false,
+								navigation: {
+									nextEl: next.length ? next.get(0) : null,
+									prevEl: prev.length ? prev.get(0) : null
+								},
+								pagination: {
+									el: pag.length ? pag.get(0) : null,
+									clickable: pag.length ? pag.attr("data-clickable") !== "false" : false,
+									renderBullet: pag.length ? pag.attr("data-index-bullet") === "true" ? function (index, className) {
+										return '<span class="' + className + '">' + ((index + 1) < 10 ? ('0' + (index + 1)) : (index + 1)) + '</span>';
+									} : null : null,
+								},
+								scrollbar: {
+									el: bar.length ? bar.get(0) : null,
+									draggable: bar.length ? bar.attr("data-draggable") !== "false" : true,
+									hide: bar.length ? bar.attr("data-draggable") === "false" : false
+								},
+								on: {
+									init: function () {
+										toggleSwiperInnerVideos(this);
+										toggleSwiperCaptionAnimation(this);
+									},
+
+									transitionStart: function () {
+										toggleSwiperInnerVideos(this);
+									},
+									transitionEnd: function () {
+											toggleSwiperCaptionAnimation(this)
+									}
+								}
+							};
+            
+							mainSlider = new Swiper($("#swiper-slider_208"), swiperOptions);
+					}
+
+
+			});
 	})(jQuery);
 
 	</script>
@@ -532,7 +512,7 @@ data-slide-bg="../images/home/new-slider.webp"
 <p>At Abri, we have one desire: to bring happiness and freshness with our products. 100% homemade with plenty of culinary influences (even if we prefer the beautiful Mediterranean)</p>
 <p><a class="btn" href="about.html">discover</a></p>
 </div>
-<div class="img grid-item-4"><img src="../images/home/ABRI_52.html"" alt="" /></div>
+<div class="img grid-item-4"><img src="../images/home/ABRI_52.html" alt="" /></div>
 </div></div>
 </div></div>
 				</div>	

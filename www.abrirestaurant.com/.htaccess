@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Ressources communes
-RewriteRule ^(templates|media|modules|plugins|components|images|assets)/(.*)$ /$1/$2 [L]
+RewriteRule ^(templates|media|modules|plugins|components|images)/(.*)$ /$1/$2 [L]
 
 # Détection de la langue du navigateur et redirection
 RewriteCond %{REQUEST_URI} ^/$
@@ -14,13 +14,13 @@ RewriteRule ^$ /fr/index.html [R=302,L]
 
 # Empêcher la redirection pour les dossiers de langue
 RewriteCond %{REQUEST_URI} !^/(fr|en)/
-RewriteCond %{REQUEST_URI} !^/(templates|media|modules|plugins|components|images|assets)/
+RewriteCond %{REQUEST_URI} !^/(templates|media|modules|plugins|components|images)/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{HTTP:Accept-Language} ^en [NC]
 RewriteRule ^(.*)$ /en/$1 [L]
 
 RewriteCond %{REQUEST_URI} !^/(fr|en)/
-RewriteCond %{REQUEST_URI} !^/(templates|media|modules|plugins|components|images|assets)/
+RewriteCond %{REQUEST_URI} !^/(templates|media|modules|plugins|components|images)/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ /fr/$1 [L]
 
