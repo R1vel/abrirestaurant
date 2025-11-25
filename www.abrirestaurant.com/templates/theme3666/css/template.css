@@ -1429,6 +1429,176 @@ span.radio+label {
   vertical-align: middle;
 }
 
+/* ================================
+   CERCLES PITA / BOWL
+   ================================ */
+
+/* Ligne avec les deux cercles */
+.cercle-row {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+/* Carte contenant chaque cercle */
+.cercle-container {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  padding: 16px 10px;
+  border-radius: 20px;
+  background: #f9fafb; /* fond léger */
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cercle-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* SVG du cercle */
+.cercle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Cercle visible */
+.cercle-full {
+  fill: none;
+  stroke: #444C5C;
+  stroke-width: 4;
+  transition: stroke-width 0.2s ease;
+}
+
+.cercle-container:hover .cercle-full {
+  stroke-width: 5;
+}
+
+/* ================================
+   TEXTE AUTO-CENTRÉ DANS LE CERCLE
+   ================================ */
+
+.cercle-text {
+  position: absolute;
+  z-index: 3;                /* passe devant le cercle */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;    /* empiler proprement */
+  align-items: center;       /* centre horizontalement */
+  justify-content: center;   /* centre verticalement */
+
+  text-align: center;
+  color: #2f3642;
+  width: 75%;
+  line-height: 1.45;
+}
+
+/* Variante pour le 2e cercle (texte plus long) */
+.cercle-text--long {
+  width: 82%;
+}
+
+/* ================================
+   TITRE DORÉ
+   ================================ */
+
+.cercle-title {
+  display: inline-block;
+  background: linear-gradient(90deg, #d7b25a, #e4c787);
+  color: #ffffff;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  text-transform: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* ================================
+   TEXTE DU 2e CERCLE
+   ================================ */
+
+.cercle-main-line {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: -22px;      /* plus serré avec la ligne du dessous */
+}
+
+.cercle-extra-line {
+  display: block;
+  font-size: 13px;
+  color: #7b818c;
+  line-height: 1.5;
+  margin-top: 0;           /* rapproché de la ligne en gras */
+}
+
+/* Texte intérieur global */
+.cercle-text p {
+  margin: 4px 0 10px 0;
+}
+
+/* Prix */
+.cercle-price {
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* ================================
+   ANIMATION CERCLE (OUVERT → FERMÉ)
+   ================================ */
+
+/* Cercle ouvert : visible en permanence */
+.cercle-full--open {
+  opacity: 1;
+}
+
+/* Cercle fermé : au départ invisible + trait non dessiné */
+.cercle-full--closed {
+  opacity: 0;
+  stroke-dasharray: 760;      /* ≈ circonférence pour r=120 */
+  stroke-dashoffset: 760;
+  transition: stroke-dashoffset 0.9s ease, opacity 0.3s ease;
+}
+
+/* Au survol : le cercle complet se dessine et se montre */
+.cercle-container:hover .cercle-full--closed {
+  opacity: 1;
+  stroke-dashoffset: 0;
+}
+
+/* Option : on atténue légèrement le cercle ouvert pendant l’anim */
+.cercle-container:hover .cercle-full--open {
+  opacity: 0.2;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+  .cercle-row {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .cercle-container {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+
+
 .item_introtext input,
 .item_fulltext input,
 .category_desc input,
@@ -15472,7 +15642,7 @@ ul.spaced li::marker {
   color: #d4b574 !important;
 }
 
-.border{
+.border {
   border: solid hsl(var(--octa-color-primary-value)) 1px;
   text-align: center;
   padding: 20px;
@@ -15488,25 +15658,25 @@ ul.spaced li::marker {
   .flex-mid {
     flex-direction: column-reverse;
   }
-  
+
   .flex-quincunx {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 2rem;
   }
-  
+
   .flex-quincunx .text {
     margin-left: 20px;
     margin-right: 20px;
     max-width: 100%;
   }
-  
+
   .flex-quincunx .text p {
     line-height: 1.5;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
-  
+
   .grid-item-1,
   .grid-item-2,
   .grid-item-3,
@@ -15517,13 +15687,13 @@ ul.spaced li::marker {
     margin-left: 20px;
     margin-right: 20px;
   }
-  
+
   .position-2 .flex-mid .text {
     margin-left: 20px;
     margin-right: 20px;
     max-width: 100%;
   }
-  
+
   .position-2 .flex-mid .text h4,
   .position-2 .flex-mid .text p {
     margin-left: 10px;
@@ -15531,7 +15701,7 @@ ul.spaced li::marker {
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
-  
+
   .itemid-101 h1 {
     padding-left: 20px;
     padding-right: 20px;

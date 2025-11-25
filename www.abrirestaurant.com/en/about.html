@@ -1,383 +1,541 @@
-﻿
-<!DOCTYPE html>
-<html lang="en" dir="ltr"
->
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Discover your fast good restaurant Abri, located in Chambéry (73) and Grenoble (38)" />	<title>Abri - Discover your fast good restaurant Abri</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description"
+		content="Discover your fast good restaurant Abri, located in Chambéry (73) and Grenoble (38)" />
+	<title>Abri - Discover your fast good restaurant Abri</title>
 	<link href="../templates/theme3666/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-	<link href="../templates/theme3666/css/bootstrap.css" rel="stylesheet" type="text/css" />	<link href="../templates/theme3666/css/template.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/theme3666/css/bootstrap.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/theme3666/css/template.css" rel="stylesheet" type="text/css" />
 	<link href="../templates/system/css/system.css" rel="stylesheet" type="text/css" />
 	<link href="../templates/theme3666/css/megamenu.css" rel="stylesheet" type="text/css" />
-<link href="../templates/theme3666/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />	<link href="../templates/theme3666/css/custom-styles.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/theme3666/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="../templates/theme3666/css/custom-styles.css" rel="stylesheet" type="text/css" />
 	<style type="text/css">
+		.googlemaps-canvas {
+			width: 100%;
+			height: 500px;
+		}
 
-	.googlemaps-canvas { width: 100%; height: 500px; }
-	#tarteaucitronAlertBig, #tarteaucitronAlertSmall { background :#303030!important;}
-	#tarteaucitronDisclaimerAlert { color : #d6d3d3!important; }
-	#tarteaucitronAlertBig #tarteaucitronCloseAlert, 
-	#tarteaucitronAlertBig #tarteaucitronPersonalize { background :#23ad35!important; color :#e6e6e6!important;}
-	#tarteaucitronAlertBig #tarteaucitronCloseAlert { background :#e0e0e0!important; color :#5c5c5c!important;}
-	#tarteaucitronAlertSmall, #tarteaucitronAlertSmall #tarteaucitronCookiesListContainer { left:initial!important; right:0; }
+		#tarteaucitronAlertBig,
+		#tarteaucitronAlertSmall {
+			background: #303030 !important;
+		}
 
+		#tarteaucitronDisclaimerAlert {
+			color: #d6d3d3 !important;
+		}
+
+		#tarteaucitronAlertBig #tarteaucitronCloseAlert,
+		#tarteaucitronAlertBig #tarteaucitronPersonalize {
+			background: #23ad35 !important;
+			color: #e6e6e6 !important;
+		}
+
+		#tarteaucitronAlertBig #tarteaucitronCloseAlert {
+			background: #e0e0e0 !important;
+			color: #5c5c5c !important;
+		}
+
+		#tarteaucitronAlertSmall,
+		#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer {
+			left: initial !important;
+			right: 0;
+		}
 	</style>
-	<script src="../media/jui/js/jquery.mind4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>	<script src="../plugins/system/t3/base-bs3/bootstrap/js/bootstrapd4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>	<script src="../templates/theme3666/js/script.js" type="text/javascript"></script>
+	<script src="../media/jui/js/jquery.mind4cc.js?676ad7366de00f340f7d4bc5310d4386" type="text/javascript"></script>
+	<script src="../plugins/system/t3/base-bs3/bootstrap/js/bootstrapd4cc.js?676ad7366de00f340f7d4bc5310d4386"
+		type="text/javascript"></script>
+	<script src="../templates/theme3666/js/script.js" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/js/jquery.tap.min.js" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/js/script.js" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/js/menu.js" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/js/nav-collapse.js" type="text/javascript"></script>
 	<script src="../media/joomladcookies/tarteaucitron/tarteaucitron.js" type="text/javascript"></script>
 	<script type="text/javascript">
-var path = "templates/theme3666/js/index.html";
+		var path = "templates/theme3666/js/index.html";
 
-;(function($){
-	$(window).load(function() {
-		$(document).on("click touchmove",function(e) {
-			
-	          var container = $("#t3-mainnav .t3-navbar-collapse");
-	          if (!container.is(e.target)
-	              && container.has(e.target).length === 0 && container.hasClass("in"))
-	          {
-	              $("#t3-mainnav .t3-navbar-collapse").toggleClass("in")
-	          }
-	      })
-		// check we miss any nav
-		if($(window).width() < 768){
-			$('.t3-navbar-collapse ul.nav').has('.dropdown-menu').t3menu({
-				duration : 100,
-				timeout : 50,
-				hidedelay : 100,
-				hover : false,
-				sb_width : 20
+		;
+		(function ($) {
+			$(window).load(function () {
+				$(document).on("click touchmove", function (e) {
+
+					var container = $("#t3-mainnav .t3-navbar-collapse");
+					if (!container.is(e.target) &&
+						container.has(e.target).length === 0 && container.hasClass("in")) {
+						$("#t3-mainnav .t3-navbar-collapse").toggleClass("in")
+					}
+				})
+				// check we miss any nav
+				if ($(window).width() < 768) {
+					$('.t3-navbar-collapse ul.nav').has('.dropdown-menu').t3menu({
+						duration: 100,
+						timeout: 50,
+						hidedelay: 100,
+						hover: false,
+						sb_width: 20
+					});
+				}
 			});
-		}
-	});
-})(jQuery);
+		})(jQuery);
 
-	
+
 		tarteaucitron.user.addthisPubId = "ra-5c2f6c448f03098b";
-        (tarteaucitron.job = tarteaucitron.job || []).push("addthis");
-       
-	(tarteaucitron.job = tarteaucitron.job || []).push("recaptcha");
-	
-	tarteaucitron.init({
-            "hashtag": "#cookies", /* Ouverture automatique du panel avec le hashtag */
-            "AcceptAllCta" : true,
-            "highPrivacy": true, /* désactiver le consentement implicite (en naviguant) ? */
-            "orientation": "bottom", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
-            "adblocker": false, /* Afficher un message si un adblocker est détecté */
-            "showAlertSmall": true, /* afficher le petit bandeau en bas à droite ? */
-            "cookieslist": true, /* Afficher la liste des cookies installés ? */
-            "removeCredit": true, /* supprimer le lien vers la source ? */
-            "customLang": false, /* supprimer le lien vers la source ? */
-            "expiration": 31536000000
-        }); 
+		(tarteaucitron.job = tarteaucitron.job || []).push("addthis");
+
+		(tarteaucitron.job = tarteaucitron.job || []).push("recaptcha");
+
+		tarteaucitron.init({
+			"hashtag": "#cookies",
+			/* Ouverture automatique du panel avec le hashtag */
+			"AcceptAllCta": true,
+			"highPrivacy": true,
+			/* désactiver le consentement implicite (en naviguant) ? */
+			"orientation": "bottom",
+			/* le bandeau doit être en haut (top) ou en bas (bottom) ? */
+			"adblocker": false,
+			/* Afficher un message si un adblocker est détecté */
+			"showAlertSmall": true,
+			/* afficher le petit bandeau en bas à droite ? */
+			"cookieslist": true,
+			/* Afficher la liste des cookies installés ? */
+			"removeCredit": true,
+			/* supprimer le lien vers la source ? */
+			"customLang": false,
+			/* supprimer le lien vers la source ? */
+			"expiration": 31536000000
+		});
 	</script>
 
-  
 
 
 
-<!-- Le HTML5 shim and media query for IE8 support -->
-<!--[if lt IE 9]>
+
+	<!-- Le HTML5 shim and media query for IE8 support -->
+	<!--[if lt IE 9]>
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script type="text/javascript" src="/plugins/system/t3/base-bs3/js/respond.min.js"></script>
 <![endif]-->
 
-<!-- You can add Google Analytics here or use T3 Injection feature -->
+	<!-- You can add Google Analytics here or use T3 Injection feature -->
 
-      <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-  <!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="https://stats.octa-solutions.fr/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1272']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+		rel="stylesheet">
+	<!-- Matomo -->
+	<script>
+		var _paq = window._paq = window._paq || [];
+		/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+		_paq.push(['trackPageView']);
+		_paq.push(['enableLinkTracking']);
+		(function () {
+			var u = "https://stats.octa-solutions.fr/";
+			_paq.push(['setTrackerUrl', u + 'matomo.php']);
+			_paq.push(['setSiteId', '1272']);
+			var d = document,
+				g = d.createElement('script'),
+				s = d.getElementsByTagName('script')[0];
+			g.async = true;
+			g.src = u + 'matomo.js';
+			s.parentNode.insertBefore(g, s);
+		})();
+	</script>
+	<!-- End Matomo Code -->
 
 </head>
 
 <body class="body__ option-com_content view-article task- itemid-901">
-      <div class="page-loader">
-      <div class="page-loader-container">
-        <div class="page-loader-body">
-          <div class="loader"><span class="block-1"></span><span class="block-2"></span><span class="block-3"></span><span class="block-4"></span><span class="block-5"></span><span class="block-6"></span><span class="block-7"></span><span class="block-8"></span><span class="block-9"></span><span class="block-10"></span><span class="block-11"></span><span class="block-12"></span><span class="block-13"></span><span class="block-14"></span><span class="block-15"></span><span class="block-16"></span></div>
-        </div>
-      </div>
-    </div>
-    <div id="color_preloader">
-    <div class="loader_wrapper">
-      <div class='uil-spin-css'><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
-      <p>Loading color scheme</p>
-    </div>
-  </div>
-    <div class="flex-wrapper"> 
-    <div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
-
-      <div id="header">
-        
-<!-- top -->
-	
-<!-- //top -->
-
-        
-<div class="mainnav-position t3-sl-nav ">
-	<div class="mainnav-wrapper stuck-container">
-	<div class="container ">
-	<div class="row">
-
-	
-	<!-- LOGO -->
-	<div class="col-sm-2">
-	<div class="logo">
-	<div class="logo-image">
-	<a href="index.html" title="Abri">
-	<img class="logo-img" src="../images/logo.html" alt="Abri" />
-	
-	</a>
-	<small class="site-slogan"></small>
-	</div>
-	</div>
-	</div>
-	<!-- //LOGO -->
-
-	
-	<div class="col-sm-7">
-	<nav id="t3-mainnav" class="navbar navbar-mainmenu t3-mainnav">
-	<div class="t3-mainnav-wrapper">
-	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
-	<i class="fa fa-bars"></i>About	</button>
-	
-	
-	</div>
-
-	<div class="t3-navbar t3-navbar-collapse navbar-collapse collapse">
-	<div  class="t3-megamenu animate fading"  data-duration="400" data-responsive="true">
-<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" class="nav navbar-nav level0">
-<li itemprop='name' class="mega-align-left" data-id="101" data-level="1" data-alignsub="left">
-<a itemprop='url' class="fullwidth"  href="index.html"   data-target="#">Home </a>
-
-</li>
-<li itemprop='name' class="current active" data-id="901" data-level="1">
-<a itemprop='url' class=""  href="about.html"   data-target="#">About   </a>
-
-</li>
-<li itemprop='name'  data-id="902" data-level="1">
-<a itemprop='url' class=""  href="menu.html"   data-target="#"> Menu  </a>
-
-</li>
-<li itemprop='name'  data-id="903" data-level="1">
-<a itemprop='url' class=""  href="click-and-collect.html"   data-target="#">Click and Collect </a>
-
-</li>
-<li itemprop='name'  data-id="142" data-level="1">
-<a itemprop='url' class=""  href="contact.html"   data-target="#">Contact </a>
-
-</li>
-</ul>
-</div>
-
-	</div>
-	</div>
-	</nav>
-	</div>
-
-	<div class="moduletable   col-sm-3"><div class="module_container"><div class="mod-menu">
-	<ul class="menu link">
-	<li class="item-893">
-<a class="btn" href="click-and-collect.html" >Order</a>
-</li>
-	</ul>
-</div></div></div>
-	
-	</div>	
-	</div>
-	</div>
-</div>
-
-<!-- HEADER -->
-<!-- //HEADER -->
-        
-<!-- BREADCRUMBS -->
-<!-- //BREADCRUMBS -->
-
-      </div>
-
-      
-
-<div id="t3-mainbody" class="t3-mainbody">
-
-	
-	<div class="container">
-	<div class="row">
-	<!-- MAIN CONTENT -->
-	<div id="t3-content" class="t3-content col-sm-12">
-
-	
-	
-	<article>
-	<div class="moduletable"><div class="module_container">
-<div class="mod_custom mod_custom__"  >
-<div class="flex-mid">
-<div>
-<h3><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Who</span> <span class="item_title_part_1 item_title_part_even item_title_part_first_half">is</span> <span class="item_title_part_2 item_title_part_odd item_title_part_second_half item_title_part_last">Abri?</span></h3>
-<p>The concept was created in 2018 by Marion & Ludo, life partners, work partners, and food partners. Today, it's with their teams that they continue to push boundaries to always offer you the best and delight you.</p>
-<p> </p>
-<h3><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">What</span> <span class="item_title_part_1 item_title_part_even item_title_part_first_half">is</span> <span class="item_title_part_2 item_title_part_odd item_title_part_second_half item_title_part_last">Abri?</span></h3>
-<p>It's a street food restaurant with Mediterranean inspiration, but not only...<br />Here, we offer you an avalanche of culinary inspirations, emphasizing the taste and freshness of our products. You can choose between a pita or a bowl, and if you're hungry or just want a light snack, there are also sides to share or nibble on solo.</p>
-</div>
-<div><img src="../images/content/presentation/ShootingAbri.html" alt="" /></div>
-</div></div></div>
-<div class="moduletable"><div class="module_container">
-<div class="mod_custom mod_custom__"  >
-<div class="flex-mid">
-
-<div><img src="../images/content/presentation/abri-75.html" alt="" /></div>
-<div >
-<h3><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Where</span> <span class="item_title_part_1 item_title_part_even item_title_part_first_half">does</span> <span class="item_title_part_2 item_title_part_odd item_title_part_first_half">it</span> <span class="item_title_part_3 item_title_part_even item_title_part_second_half item_title_part_last">come from?</span></h3>
-<ul>
-<li>Pita bread, made by an artisan</li>
-<li>Meat, sourced by Maison Milleret in Chambéry, always of French origin</li>
-<li>Vegetables, fresh and as seasonal as possible</li>
-<li>Sauces, always homemade and well seasoned</li>
-<li>Potatoes, cut in the kitchen, double cooked and seasoned with smoked paprika</li>
-<li>Hummus, always creamy, with the perfect tahini</li>
-<li>In short, Abri is a friendly cuisine that stands out from the ordinary, Mediterranean flavors that rock, a cozy atmosphere, in short... come settle in at Abri, you'll see, it's good here.</li>
-</ul>
-</div>
-</div>
- </div></div></div>
-	
-	
-	<!-- Social Sharing -->
-	 
-	<!-- Pagination -->
-	</article>
-
-	
-	</div>
-	<!-- //MAIN CONTENT -->
-	</div>
-	</div>
-
-</div>
-
-
-
-	
-
-
-      
-
-
-      <div id="fixed-sidebar-left">
-        
-      </div>
-
-      <div id="fixed-sidebar-right">
-        
-      </div>
-
-    </div>
-    
-<!-- FOOTER -->
-<footer id="t3-footer" class="wrap t3-footer">
-
-	
-	
-	
-			
-		<div class="wrap t3-sl t3-sl-footer ">
-		<div class="container">
-			<div class="row">
-	
-	
-	
-		
+	<div class="page-loader">
+		<div class="page-loader-container">
+			<div class="page-loader-body">
+				<div class="loader"><span class="block-1"></span><span class="block-2"></span><span
+						class="block-3"></span><span class="block-4"></span><span class="block-5"></span><span
+						class="block-6"></span><span class="block-7"></span><span class="block-8"></span><span
+						class="block-9"></span><span class="block-10"></span><span class="block-11"></span><span
+						class="block-12"></span><span class="block-13"></span><span class="block-14"></span><span
+						class="block-15"></span><span class="block-16"></span></div>
 			</div>
 		</div>
 	</div>
-	
-	<div class="wrap t3-sl t3-sl-copyright">
-	<div class="container">
-	<div class="row">
+	<div id="color_preloader">
+		<div class="loader_wrapper">
+			<div class='uil-spin-css'>
+				<div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+				</div>
+				<div>
+					<div></div>
+				</div>
+			</div>
+			<p>Loading color scheme</p>
+		</div>
+	</div>
+	<div class="flex-wrapper">
+		<div class="t3-wrapper">
+			<!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
 
-	<div class="moduletable   col-sm-12"><div class="module_container">
+			<div id="header">
 
-<div class="mod_custom mod_custom__"  >
-	<div class="flex-third">
-<div>
-<h5><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Our</span> <span class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">location</span></h5>
-<p class="mini-border">17 rue Bonivard, <br /> 73000 Chambéry</p>
-<p>6 place Championnet <br /> 38000 Grenoble<!--<img style="max-width: 80px;" src="/images/opening_soon.webp" alt=""/>--></p>
-</div>
+				<!-- top -->
 
-<div>
-<h5><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Contact</span> <span class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">us</span></h5>
-<p>Chambéry: <a href="tel:+33479849148">04 79 84 91 48</a> <br />
-Grenoble: <a href="tel:+33978801241">09 78 80 12 41</a> <br />
-<p><a href="mailto:contact@abrirestaurant.com">contact@abrirestaurant.com</a></p>
-</div>
+				<!-- //top -->
 
-<div>
-<h5><span class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Follow</span> <span class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">us</span></h5>
-<ul class="nav menu social">
-<li><a href="https://www.facebook.com/abrichambery/?locale=br_FR" title="Facebook" class="fa fa-facebook" target="_blank" rel="noopener noreferrer"></a></li><li><a href="https://www.instagram.com/abrirestaurant/" title="Instagram" class="fa fa-instagram" target="_blank" rel="noopener noreferrer"></a></li></ul>
 
-</div></div>
-</div></div><div class="moduletable   col-sm-12"><div class="module_container">
+				<div class="mainnav-position t3-sl-nav ">
+					<div class="mainnav-wrapper stuck-container">
+						<div class="container ">
+							<div class="row">
 
-<div  >
-	<div style="display: flex; flex-direction: column; align-items:end; flex-wrap:wrap; gap:10px;font-size: 10px;">
 
-<div>
-SARL CHALOUNGE (Chambéry) SIREN 833 426 315
-</div>
+								<!-- LOGO -->
+								<div class="col-sm-2">
+									<div class="logo">
+										<div class="logo-image">
+											<a href="index.html" title="Abri">
+												<img class="logo-img" src="../images/logo.html" alt="Abri" />
 
-<div>
-SARL CHABIZ (Grenoble) SIREN 948 310 453
-</div>
-</div></div>
-</div></div>
-	
-	<div class="copyright col-sm-4">
-	<span class="copy">&copy;</span>
-	<span class="year">2025</span>
-	<span>| </span>
-	        <a class="privacy_link" rel="license" href="legal-notice.html">
-	            Legal Notice	        </a>
-	<a class="terms_link" href="privacy-policy.html">- Privacy Policy</a>
-	- Réalisation <a target="_blank" href="https://www.octacom.fr/" title="Agence de publicité, création de site internet, marketing entreprise"><img src="https://www.octacom.fr/images/logo-blanc.png" style="vertical-align: middle;" border="0" width="80px" alt="Logo Octacom"></a>
+											</a>
+											<small class="site-slogan"></small>
+										</div>
+									</div>
+								</div>
+								<!-- //LOGO -->
+
+
+								<div class="col-sm-7">
+									<nav id="t3-mainnav" class="navbar navbar-mainmenu t3-mainnav">
+										<div class="t3-mainnav-wrapper">
+											<!-- Brand and toggle get grouped for better mobile display -->
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle" data-toggle="collapse"
+													data-target=".t3-navbar-collapse">
+													<i class="fa fa-bars"></i>About </button>
+
+
+											</div>
+
+											<div class="t3-navbar t3-navbar-collapse navbar-collapse collapse">
+												<div class="t3-megamenu animate fading" data-duration="400"
+													data-responsive="true">
+													<ul itemscope itemtype="http://www.schema.org/SiteNavigationElement"
+														class="nav navbar-nav level0">
+														<li itemprop='name' class="mega-align-left" data-id="101"
+															data-level="1" data-alignsub="left">
+															<a itemprop='url' class="fullwidth" href="index.html"
+																data-target="#">Home </a>
+
+														</li>
+														<li itemprop='name' class="current active" data-id="901"
+															data-level="1">
+															<a itemprop='url' class="" href="about.html"
+																data-target="#">About </a>
+
+														</li>
+														<li itemprop='name' data-id="902" data-level="1">
+															<a itemprop='url' class="" href="menu.html" data-target="#">
+																Menu </a>
+
+														</li>
+														<li itemprop='name' data-id="903" data-level="1">
+															<a itemprop='url' class="" href="click-and-collect.html"
+																data-target="#">Order</a>
+														</li>
+														<li itemprop='name' data-id="142" data-level="1">
+															<a itemprop='url' class="" href="contact.html"
+																data-target="#">Contact </a>
+
+														</li>
+													</ul>
+												</div>
+
+											</div>
+										</div>
+									</nav>
+								</div>
+
+								<div class="moduletable   col-sm-3">
+									<div class="module_container">
+										<div class="mod-menu">
+											<ul class="menu link">
+												<li class="item-893">
+													<a class="btn" href="click-and-collect.html">Order</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- HEADER -->
+				<!-- //HEADER -->
+
+				<!-- BREADCRUMBS -->
+				<!-- //BREADCRUMBS -->
+
+			</div>
+
+
+
+			<div id="t3-mainbody" class="t3-mainbody">
+
+
+				<div class="container">
+					<div class="row">
+						<!-- MAIN CONTENT -->
+						<div id="t3-content" class="t3-content col-sm-12">
+
+
+
+							<article>
+								<div class="moduletable">
+									<div class="module_container">
+										<div class="mod_custom mod_custom__">
+											<div class="flex-mid">
+												<div>
+													<h3><span
+															class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Who</span>
+														<span
+															class="item_title_part_1 item_title_part_even item_title_part_first_half">is</span>
+														<span
+															class="item_title_part_2 item_title_part_odd item_title_part_second_half item_title_part_last">Abri?</span>
+													</h3>
+													<p>The concept was created in 2018 by Marion & Ludo, life partners,
+														work partners, and food partners. Today, it's with their teams
+														that they continue to push boundaries to always offer you the
+														best and delight you.</p>
+													<p> </p>
+													<h3><span
+															class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">What</span>
+														<span
+															class="item_title_part_1 item_title_part_even item_title_part_first_half">is</span>
+														<span
+															class="item_title_part_2 item_title_part_odd item_title_part_second_half item_title_part_last">Abri?</span>
+													</h3>
+													<p>It's a street food restaurant with Mediterranean inspiration, but
+														not only...<br />Here, we offer you an avalanche of culinary
+														inspirations, emphasizing the taste and freshness of our
+														products. You can choose between a pita or a bowl, and if you're
+														hungry or just want a light snack, there are also sides to share
+														or nibble on solo.</p>
+												</div>
+												<div><img src="../images/content/presentation/ShootingAbri.html"
+														alt="" /></div>
+											</div>
+										</div>
+									</div>
+									<div class="moduletable">
+										<div class="module_container">
+											<div class="mod_custom mod_custom__">
+												<div class="flex-mid">
+
+													<div><img src="../images/content/presentation/abri-75.html"
+															alt="" /></div>
+													<div>
+														<h3><span
+																class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Where</span>
+															<span
+																class="item_title_part_1 item_title_part_even item_title_part_first_half">does</span>
+															<span
+																class="item_title_part_2 item_title_part_odd item_title_part_first_half">it</span>
+															<span
+																class="item_title_part_3 item_title_part_even item_title_part_second_half item_title_part_last">come
+																from?</span></h3>
+														<ul>
+															<li>Pita bread, made by an artisan</li>
+															<li>Meat, sourced by Maison Milleret in Chambéry, always of
+																French origin</li>
+															<li>Vegetables, fresh and as seasonal as possible</li>
+															<li>Sauces, always homemade and well seasoned</li>
+															<li>Potatoes, cut in the kitchen, double cooked and seasoned
+																with smoked paprika</li>
+															<li>Hummus, always creamy, with the perfect tahini</li>
+															<li>In short, Abri is a friendly cuisine that stands out
+																from the ordinary, Mediterranean flavors that rock, a
+																cozy atmosphere, in short... come settle in at Abri,
+																you'll see, it's good here.</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+									<!-- Social Sharing -->
+
+									<!-- Pagination -->
+							</article>
+
+
+						</div>
+						<!-- //MAIN CONTENT -->
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+
+			<div id="fixed-sidebar-left">
+
+			</div>
+
+			<div id="fixed-sidebar-right">
+
+			</div>
+
+		</div>
+
+		<!-- FOOTER -->
+		<footer id="t3-footer" class="wrap t3-footer">
+
+
+
+
+
+			<div class="wrap t3-sl t3-sl-footer ">
+				<div class="container">
+					<div class="row">
+
+
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="wrap t3-sl t3-sl-copyright">
+				<div class="container">
+					<div class="row">
+
+						<div class="moduletable   col-sm-12">
+							<div class="module_container">
+
+								<div class="mod_custom mod_custom__">
+									<div class="flex-third">
+										<div>
+											<h5><span
+													class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Our</span>
+												<span
+													class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">location</span>
+											</h5>
+											<p class="mini-border">17 rue Bonivard, <br /> 73000 Chambéry</p>
+											<p>6 place Championnet <br /> 38000 Grenoble
+												<!--<img style="max-width: 80px;" src="/images/opening_soon.webp" alt=""/>-->
+											</p>
+										</div>
+
+										<div>
+											<h5><span
+													class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Contact</span>
+												<span
+													class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">us</span>
+											</h5>
+											<p>Chambéry: <a href="tel:+33479849148">04 79 84 91 48</a> <br />
+												Grenoble: <a href="tel:+33978801241">09 78 80 12 41</a> <br />
+												<p><a
+														href="mailto:abri-restaurant@outlook.com">abri-restaurant@outlook.com</a>
+												</p>
+										</div>
+
+										<div>
+											<h5><span
+													class="item_title_part_0 item_title_part_odd item_title_part_first_half item_title_part_first">Follow</span>
+												<span
+													class="item_title_part_1 item_title_part_even item_title_part_second_half item_title_part_last">us</span>
+											</h5>
+											<ul class="nav menu social">
+												<li><a href="https://www.facebook.com/abrichambery/?locale=br_FR"
+														title="Facebook" class="fa fa-facebook" target="_blank"
+														rel="noopener noreferrer"></a></li>
+												<li><a href="https://www.instagram.com/abrirestaurant/"
+														title="Instagram" class="fa fa-instagram" target="_blank"
+														rel="noopener noreferrer"></a></li>
+											</ul>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="moduletable   col-sm-12">
+								<div class="module_container">
+
+									<div>
+										<div
+											style="display: flex; flex-direction: column; align-items:end; flex-wrap:wrap; gap:10px;font-size: 10px;">
+
+											<div>
+												SARL CHALOUNGE (Chambéry) SIREN 833 426 315
+											</div>
+
+											<div>
+												SARL CHABIZ (Grenoble) SIREN 948 310 453
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="copyright col-sm-4">
+								<span class="copy">&copy;</span>
+								<span class="year">2025</span>
+								<span>| </span>
+								<a class="privacy_link" rel="license" href="legal-notice.html">
+									Legal Notice </a>
+								<a class="terms_link" href="privacy-policy.html">- Privacy Policy</a>
+								- Réalisation <a target="_blank" href="https://www.octacom.fr/"
+									title="Agence de publicité, création de site internet, marketing entreprise"><img
+										src="https://www.octacom.fr/images/logo-blanc.png"
+										style="vertical-align: middle;" border="0" width="80px" alt="Logo Octacom"></a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+		</footer>
+		<!-- //FOOTER -->
 	</div>
 
+	<div id="back-top">
+		<a href="#"><span></span></a>
 	</div>
-	</div>
-	</div>	
+</body>
 
-    	
-
-</footer>
-<!-- //FOOTER -->
-  </div>
-
-    <div id="back-top">
-    <a href="#"><span></span></a>
-    </div>
-              </body>
-            
 </html>
-
