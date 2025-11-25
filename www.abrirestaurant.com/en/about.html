@@ -29,7 +29,35 @@
 	<script src="../plugins/system/t3/base-bs3/js/menu.js" type="text/javascript"></script>
 	<script src="../plugins/system/t3/base-bs3/js/nav-collapse.js" type="text/javascript"></script>
 	<script src="../media/joomladcookies/tarteaucitron/tarteaucitron.js" type="text/javascript"></script>
-	<script type="text/javascript">tarteaucitron.user.addthisPubId = "ra-5c2f6c448f03098b";
+	<script type="text/javascript">
+var path = "templates/theme3666/js/index.html";
+
+;(function($){
+	$(window).load(function() {
+		$(document).on("click touchmove",function(e) {
+			
+	          var container = $("#t3-mainnav .t3-navbar-collapse");
+	          if (!container.is(e.target)
+	              && container.has(e.target).length === 0 && container.hasClass("in"))
+	          {
+	              $("#t3-mainnav .t3-navbar-collapse").toggleClass("in")
+	          }
+	      })
+		// check we miss any nav
+		if($(window).width() < 768){
+			$('.t3-navbar-collapse ul.nav').has('.dropdown-menu').t3menu({
+				duration : 100,
+				timeout : 50,
+				hidedelay : 100,
+				hover : false,
+				sb_width : 20
+			});
+		}
+	});
+})(jQuery);
+
+	
+		tarteaucitron.user.addthisPubId = "ra-5c2f6c448f03098b";
         (tarteaucitron.job = tarteaucitron.job || []).push("addthis");
        
 	(tarteaucitron.job = tarteaucitron.job || []).push("recaptcha");

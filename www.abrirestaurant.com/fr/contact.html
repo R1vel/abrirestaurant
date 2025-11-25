@@ -56,6 +56,31 @@
 ;(function($){$(document).ready(function(){$(".no-edit").closest(".moduletable").addClass("no-edit");})})(jQuery);
 (function($){$(document).ready(function(){var v=$("#contact-form_115").validate({wrapper:"mark",submitHandler:function(f){$(f).ajaxcaptcha();return false}});$("#clear_115").click(function(){$("#contact-form_115").trigger("reset");v.resetForm();if(!$.support.placeholder){$(".mod_tm_ajax_contact_form *[placeholder]").each(function(n){$(this).parent().find(">.form_placeholder").show()})}return false});$("#message_4_115").rules("add", {minlength: 20});})})(jQuery);
 
+var path = "templates/theme3666/js/index.html";
+
+;(function($){
+	$(window).load(function() {
+		$(document).on("click touchmove",function(e) {
+			
+	          var container = $("#t3-mainnav .t3-navbar-collapse");
+	          if (!container.is(e.target)
+	              && container.has(e.target).length === 0 && container.hasClass("in"))
+	          {
+	              $("#t3-mainnav .t3-navbar-collapse").toggleClass("in")
+	          }
+	      })
+		// check we miss any nav
+		if($(window).width() < 768){
+			$('.t3-navbar-collapse ul.nav').has('.dropdown-menu').t3menu({
+				duration : 100,
+				timeout : 50,
+				hidedelay : 100,
+				hover : false,
+				sb_width : 20
+			});
+		}
+	});
+})(jQuery);
 
 	
 	tarteaucitron.user.addthisPubId = "ra-5c2f6c448f03098b";

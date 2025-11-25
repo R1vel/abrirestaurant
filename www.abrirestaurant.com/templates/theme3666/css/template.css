@@ -15484,8 +15484,58 @@ ul.spaced li::marker {
   align-items: center;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .flex-mid {
     flex-direction: column-reverse;
+  }
+  
+  .flex-quincunx {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+  
+  .flex-quincunx .text {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+  
+  .flex-quincunx .text p {
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .grid-item-1,
+  .grid-item-2,
+  .grid-item-3,
+  .grid-item-4 {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .position-2 .flex-mid .text {
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+  
+  .position-2 .flex-mid .text h4,
+  .position-2 .flex-mid .text p {
+    margin-left: 10px;
+    margin-right: 10px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .itemid-101 h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
