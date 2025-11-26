@@ -1599,6 +1599,33 @@ span.radio+label {
 
 
 
+
+
+/* Images "Les Sides / Le Dessert" en bas de la page */
+.flex-mid.top > div img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 600px;
+}
+
+/* Tablettes */
+@media (max-width: 1024px) {
+  .flex-mid.top > div img {
+    margin-bottom: 350px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .flex-mid.top > div img {
+    margin-bottom: 200px;
+  }
+}
+
+
+
 .item_introtext input,
 .item_fulltext input,
 .category_desc input,
